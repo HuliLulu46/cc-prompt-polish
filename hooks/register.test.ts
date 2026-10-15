@@ -73,6 +73,12 @@ test('-c with nothing extra fills a bare /compact', async ($, on) => {
   expect(seen.fills).toEqual(['/compact'])
 })
 
+test('-c also reads 无 as nothing extra', async ($, on) => {
+  const seen = stubs(on, () => '无')
+  await $.command.run(run('-c'))
+  expect(seen.fills).toEqual(['/compact'])
+})
+
 test('no text shows usage', async ($, on) => {
   const seen = stubs(on, () => 'x')
   await $.command.run(run(''))

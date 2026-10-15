@@ -166,7 +166,7 @@ export function register(on: On): void {
             : `Generation failed: ${reason ?? 'the model returned nothing'}`,
         )
       }
-      const command = brief === NOTHING_EXTRA ? '/compact' : `/compact ${brief}`
+      const command = brief === NOTHING_EXTRA || brief === '无' ? '/compact' : `/compact ${brief}`
       const { isFilled } = await $.prompt.fill({ text: command })
       return isFilled ? {} : notify(`Input box unavailable. Result: ${command}`, 30000)
     }
