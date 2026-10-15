@@ -1,0 +1,5 @@
+{
+  "name": "polish",
+  "version": "0.1.0",
+  "description": "/polish <text>: rewrites it into a clearer prompt and leaves the result in the input box for you to confirm"
+}

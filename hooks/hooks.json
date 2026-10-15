@@ -1,0 +1,4 @@
+{
+  "description": "Registers /polish, which rewrites its argument text and writes it back to the input box",
+  "modules": ["./register.ts"]
+}
